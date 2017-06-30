@@ -7,6 +7,7 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
+var concat = require('gulp-concat');
 
 gulp.task('serve', [], function () {
     browserSync({
@@ -21,6 +22,21 @@ gulp.task('serve', [], function () {
     gulp.watch(['images/*.css'], reload);
 });
 
+gulp.task('gopcss', function() {
+  return gulp.src([
+      'css/bootstrap.min.css', 
+      'css/font-awesome.min.css', 
+      'css/jquery.fullPage.css', 
+      'css/jquery.gridrotator.css',
+      'css/lightbox.css', 
+      'css/colorbox.css',
+      'css/style.css'
+      ])
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('css/'));
+});
+
+
 gulp.task('compress', function() {
   //cấu hình minify js
   gulp.src('js/*.js') //đường dẫn đến thư mục chứa các file js
@@ -28,11 +44,11 @@ gulp.task('compress', function() {
         exclude: ['tasks'],
         ignoreFiles: ['-min.js'] //những file không muốn nén
     }))
-    .pipe(gulp.dest('dist/js')); //thư mục dùng để chứa các file js sau khi nén
+    .pipe(gulp.dest('js')); //thư mục dùng để chứa các file js sau khi nén
   //cấu hình minify css
   gulp.src('css/*.css') //đường dẫn đến thư mục chứa các file css
     .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/css')); //thư mục dùng để chứa các file css sau khi nén
+    .pipe(gulp.dest('css')); //thư mục dùng để chứa các file css sau khi nén
   //cấu hình minify image
   gulp.src('images/*') //đường dẫn đến thư mục chứa các file images
     .pipe(imagemin({
@@ -40,7 +56,7 @@ gulp.task('compress', function() {
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
     }))
-    .pipe(gulp.dest('dist/images')); //thư mục dùng để chứa các file images sau khi nén
+    .pipe(gulp.dest('images')); //thư mục dùng để chứa các file images sau khi nén
 });
 
 // Compile Our Sass
@@ -58,4 +74,4 @@ gulp.task('watch', function () {
 });
 
 // Default Task
-gulp.task('default', ['sass', 'watch', 'serve']);
+gulp.task('default', ['sass', 'watch', 'serve', 'gopcss']);

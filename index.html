@@ -12,16 +12,17 @@
 	<meta name="keywords"  content="" />
 	<meta name="Resource-type" content="Document" />
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!--<link rel="stylesheet" href="css/lightbox.css">-->
+	<!--<link rel="stylesheet" href="css/jquery.gridrotator.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />-->
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+
+	
 </head>
 <body>
 
@@ -31,8 +32,8 @@
 		<ul id="list-menu">
 			<li><a href="#Home" data-menuanchor="Home" title="Home"><span class="fa fa-home"></span></a></li>
 			<li><a href="#About" data-menuanchor="About" title="About"><span class="fa fa-user-circle-o"></span></a></li>
-			<li><a href="#Services" data-menuanchor="Services" title="Services"><span class="fa fa-cogs"></span></a></li>
-			<li><a href="#Portfolio" data-menuanchor="Portfolio" title="Portfolio"><span class="fa fa-wpforms"></span></a></li>
+			<li><a href="#Skills" data-menuanchor="Skills" title="Skills"><span class="fa fa-ravelry"></span></a></li>
+			<!--<li><a href="#Portfolio" data-menuanchor="Portfolio" title="Portfolio"><span class="fa fa-wpforms"></span></a></li>-->
 			<li><a class="show-contact" title="Contact"><span class="fa fa-address-card-o"></span></a></li>
 		</ul>
 	</div>
@@ -58,7 +59,7 @@
 			<img src="images/logo_white.png" alt="MyHo - Front End Developer" class="logo-positon">
 		</div>
 		<div id="particles"></div>
-		<svg id="svg-source" height="0" version="1.1" 
+		<!--<svg id="svg-source" height="0" version="1.1" 
 		xmlns="http://www.w3.org/2000/svg" style="position:absolute; margin-left: -100%" 
 		xmlns:xlink="http://www.w3.org/1999/xlink">
 			<g id="git" data-iconmelon="Iconmelon:c88d710192f240e49b7f92912997850e">
@@ -302,7 +303,7 @@
 				<path fill="#010202" d="M12.164,17.65c0.024-0.015,0.073-0.043,0.097-0.058c-0.098,0.583-0.078,1.175-0.092,1.765l-0.079,0.026
 				c-0.049-0.366-0.046-0.739-0.025-1.11c0.009-0.125,0.024-0.25,0.042-0.375C12.122,17.814,12.141,17.732,12.164,17.65z"></path>
 			</g>
-		</svg>
+		</svg>-->
 	</div>
 	<div class="section about" id="section1">
 		<div class="box-overlay">
@@ -317,46 +318,168 @@
 					<li><p><span class="cl-main">Email:</span> myho.vn@gmail.com</p></li>
 				</ul>
 				<ul class="link-contact">
-					<li><a href="https://www.facebook.com/my.ho.397501" target="_blank">FACEBOOK</a></li>
+					<li><a href="https://www.facebook.com/myhovn" target="_blank">FACEBOOK</a></li>
 					<li><a href="https://www.linkedin.com/in/my-ho-554600144/" target="_blank">linkedin</a></li>
-					<li><a href="https://www.linkedin.com/in/my-ho-554600144/" target="_blank">google plus	</a></li>
+					<li><a href="https://plus.google.com/115607603430319638030" target="_blank">google plus	</a></li>
 				</ul>
 				
 			</div>
 		</div>
 	</div>
-	<div class="section services" id="section2">
+	<div class="section skills" id="section2">
 		<div class="box-overlay">
 			<div class="services-details">
-				<div class="row">
-					<div class="col-sm-4">
-						
+				<div class="text-zone">
+					<h2><span>Skills</span> & <span>Experience</span></h2>
+					<div class="desc">
+						The scope of my work is large part of the front end : HTML/CSS/JS, coding layouts,
+						 newsletters, building website with Wordpress , Cakephp / MySQL. 
 					</div>
+					
+					<a class="lightbox-timeline" data-lightbox="image-1" href="images/timeline.PNG">
+						<img class="time-line" src="images/timeline.PNG" alt="myho timeline">
+					</a>
+					
+					<div class="clear"></div>
 				</div>
+				<div class="clear"></div>		
+				<div id="tag-cloud"></div>
+
 			</div>
 		</div>
 	</div>
-	<div class="section portfolio" id="section3">
+	<!--<div class="section portfolio" id="section3">
 		<div class="box-overlay">
-			<ul class="list-portfolio">
-				<li>
-					<img src="images/portfolio/1.jpg" alt="" class="img-portfolio">
-				</li>
-				<li>
-					<img src="images/portfolio/2.jpg" alt="" class="img-portfolio">
-				</li>
-				<li>
-					<img src="images/portfolio/3.jpg" alt="" class="img-portfolio">
-				</li>
-				<li>
-					<img src="images/portfolio/5.jpg" alt="" class="img-portfolio">
-				</li>
-				
-			</ul>
-		</div>
-	</div>
-</div>
+			<div id="ri-grid" class="ri-grid ri-grid-size-1 ri-shadow">
+				<img class="ri-loading-image" src="images/loading.gif"/>
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/1.png"/>
+						</a>
+						<div class="box-shadow">	
 
+						</div>
+						<div class="viewproject" onclick="viewProject(1)"><span>View Project</span></div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/medium/2.jpg"/><img src="images/portfolio/2.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<div class="viewproject" onclick="viewProject(2)"><span>View Project</span></div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/4.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/5.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/6.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/7.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/8.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/9.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/11.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/12.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/portfolio/13.png"/>
+						</a>
+						<div class="box-shadow">	
+
+						</div>
+						<a href="#" class="viewproject"><span>View Project</span></a>
+					</li>	
+				</ul>
+			</div>
+			
+		</div>
+	</div>-->
+</div>
+<div class="slider" style="display:none">
+	<a class="group1 f1" href="images/slider/1-1.jpg">1</a>
+	<a class="group1" href="images/slider/1-2.jpg">1</a>
+
+	<a class="group2 f2" href="images/slider/2-1.jpg">2</a>
+	<a class="group2" href="images/slider/2-2.jpg">2</a>
+
+	<a class="group4 f4" href="images/slider/4-1.jpg">3</a>
+	<a class="group4" href="images/slider/4-2.jpg">3</a>
+
+	<a class="group5 f5" href="images/slider/5-1.jpg">4</a>
+	<a class="group5" href="images/slider/5-2.jpg">4</a>
+
+	<a class="group6 f6" href="images/slider/6-1.jpg">5</a>
+	<a class="group6" href="images/slider/6-2.jpg">5</a>
+
+	<a class="group7 f7" href="images/slider/7-1.jpg">7</a>
+	<a class="group7" href="images/slider/7-2.jpg">7</a>
+
+	<a class="group8 f8" href="images/slider/8-1.jpg">8</a>
+	<a class="group8" href="images/slider/8-2.jpg">8</a>
+</div>
 <div class="contact modal fade" role="dialog">
 	<div class="modal-dialog">
 		<button type="button" class="close" data-dismiss="modal"></button>
@@ -368,13 +491,25 @@
 				<li><p>myho.vn@gmail.com</p></li>
 			</ul>
 			<ul class="link-contact">
-				<li><a href="https://www.facebook.com/my.ho.397501" target="_blank">FACEBOOK</a></li>
+				<li><a href="https://www.facebook.com/myhovn" target="_blank">FACEBOOK</a></li>
 				<li><a href="https://www.linkedin.com/in/my-ho-554600144/" target="_blank">linkedin</a></li>
-				<li><a href="https://www.linkedin.com/in/my-ho-554600144/" target="_blank">google plus	</a></li>
+				<li><a href="https://plus.google.com/115607603430319638030" target="_blank">google plus	</a></li>
 			</ul>
 		</div>
 
 	</div>
 </div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/jquery.svg3dtagcloud.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>

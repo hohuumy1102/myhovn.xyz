@@ -1,7 +1,8 @@
 $(document).ready(function() {
+
     $('#fullpage').fullpage({
-        sectionsColor: ['#1bbc9b', '#F5F5F5' ,'#525252'],
-        anchors: ['Home', 'About', 'Services', 'Portfolio'],
+        sectionsColor: ['#1bbc9b', '#F5F5F5' ,'#303030'],
+        anchors: ['Home', 'About', 'Skills', 'Portfolio'],
         menu: '#list-menu',
         scrollingSpeed: 1000
     });
@@ -10,8 +11,11 @@ $(document).ready(function() {
     	$('#list-menu').toggleClass('in');
     });
 
-
     
+ 
+    
+    // $(".lightbox-timeline").colorbox({rel:'lightbox-timeline'});
+
     var _h = $(window).height()/2;
     var _w = $(window).width()/2;
     $('.list-portfolio li').css({'height':_h, 'width': _w});
@@ -54,3 +58,94 @@ $(function(){
     });
 
 });
+
+$( document ).ready( function() {
+
+    var entries = [ 
+
+        { label: 'Bootstrap', url: '', target: '_top' },
+        { label: 'PHP', url: '', target: '_top' },
+        { label: 'JavaScript', url: '', target: '_top' },
+        { label: 'Wordpress', url: '', target: '_top' },
+        { label: 'HTML 5', url: '', target: '_top' },
+        { label: 'SASS', url: '', target: '_top' },
+        { label: 'AJAX', url: '', target: '_top' },
+        { label: 'CakePHP', url: '', target: '_top' },
+        { label: 'JSON', url: '', target: '_top' },
+        { label: 'CSS 3', url: '', target: '_top' },
+        { label: 'npm', url: '', target: '_top' },
+        { label: 'Bower', url: '', target: '_top' },
+        { label: 'Foundation', url: '', target: '_top' },
+        { label: 'MySQL', url: '', target: '_top' },
+        { label: 'Jquery', url: '', target: '_top' },
+        { label: 'Grunt', url: '', target: '_top' },
+        { label: 'Gulp', url: '', target: '_top' }
+    ];
+
+    var settings = {
+
+        entries: entries,
+        width:500,
+        height:460,
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: '#303030',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 2,
+        fontFamily: 'Roboto Mono, monospace',
+        fontSize: '16',
+        fontColor: '#86ad50',
+        fontWeight: 'normal',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: false
+
+    };
+
+    //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+    $( '#tag-cloud' ).svg3DTagCloud( settings );
+
+} );
+
+$(function() {
+			
+    $( '#ri-grid' ).gridrotator( {
+        rows : 3,
+        columns : 4,
+        maxStep : 2,
+        interval : 2000,
+        w1024 : {
+            rows : 3,
+            columns : 4
+        },
+        w768 : {
+            rows : 3,
+            columns : 4
+        },
+        w480 : {
+            rows : 3,
+            columns : 2
+        },
+        w320 : {
+            rows : 3,
+            columns : 2
+        },
+        w240 : {
+            rows : 3,
+            columns : 2
+        },
+    } );
+
+});
+
+$(document).ready(function(){
+    $(".group1").colorbox({rel:'group1'});
+    $(".group2").colorbox({rel:'group2'});
+});
+function viewProject(id){
+    $('.f'+id).trigger('click');
+}

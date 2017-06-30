@@ -30,6 +30,7 @@
     "README.md"
   ],
   "dependencies": {
+    "gulp-concat": "^2.6.1",
     "jquery": ">=1.6.0"
   },
   "authors": [
@@ -42,17 +43,17 @@
   "homepage": "https://github.com/alvarotrigo/fullPage.js",
   "namespace": "$.fn.fullpage",
   "devDependencies": {
+    "browser-sync": "^2.8.12",
     "gulp": "^3.9.0",
     "gulp-clean-css": "^2.0.8",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
-    "browser-sync": "^2.8.12",
-    "gulp-minify": "^1.0.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-imagemin": "^3.3.0",
-    "imagemin-pngquant": "^5.0.1",
-    "gulp-livereload": "^3.8.1"
+    "imagemin-pngquant": "^5.0.1"
   }
 }
